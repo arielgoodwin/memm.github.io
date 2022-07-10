@@ -32,4 +32,6 @@ adaptable kernel $h$.
 |:----------------------------:|:------------------------------------:|
 |  Multivariate Normal $(\mu \in \mathbb{R}^d, \Sigma \in \mathbb{S}^d, \Sigma \succ 0$)| $x^+ = (tI +\Sigma)^{-1}(\Sigma\bar{x}+t\mu)$|
 | Multivariate Normal-inverse Gaussian $(\mu,\beta \in \mathbb{R}^d, \alpha, \delta \in \mathbb{R}, \delta > 0,\\\\ \Sigma \in \mathbb{S}^d, \Sigma \succ 0, \alpha \geq \sqrt{\beta^T\Sigma \beta},\\\\ \gamma := \sqrt{\alpha^2 - \beta^T\Sigma \beta})$ | $x^+ = (I+\rho\Sigma^{-1})^{-1}(t\beta+\bar{x}+\rho\Sigma^{-1}\mu), \text{ where } \rho \in \mathbb{R}\_+\colon\\\\ (\rho\delta)^2 + \lVert (\rho^{-1}I+\Sigma^{-1})^{-1}(t\beta +\bar{x} - \mu\rVert\_{\Sigma^{-1}}^2 = (\alpha t)^2$|
+|Gamma $(\alpha, \beta \in \mathbb{R}\_{++})$ | $x^+ = (\bar{x} - t\beta +\sqrt{(\bar{x}-t\beta)^2 + 4t\alpha})/2$|
+|Laplace $(\mu \in \mathbb{R}, b \in \mathbb{R}\_{++})$| $x^+ = \begin{cases}\mu, &\bar{x} = \mu\\\\ \mu+b\rho,&\bar{x}\neq \mu\end{cases}\\\\ \text{ where } \rho \in \mathbb{R}\colon \alpha\_1\rho^3 + \alpha\_2\rho^2 +\alpha\_3\rho + \alpha\_4 = 0,\\\\ \text{ with } \alpha\_1 = (b/t)^2b^2, \alpha\_2 = 2(b/t)^2b(\mu-\bar{x}),\\\\ \alpha\_3 = (b/t)^2(\mu -\bar{x})^2 - 2(b/t)b -1, \alpha\_4 = -2(b/t)(\mu-\bar{x})$|
 
