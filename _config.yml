@@ -28,7 +28,7 @@ twitter_username: ArielGoodwin8
 github_username: arielgoodwin 
 
 # Build settings
-theme: jekyll-theme-midnight 
+theme: minima 
 plugins:
   - jekyll-feed
 markdown: kramdown
