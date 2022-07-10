@@ -4,4 +4,4 @@
 
 layout: home
 ---
-## A collection of Cramér functions and their corresponding Bregman proximity operators implemented in Python.
+
