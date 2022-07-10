@@ -8,9 +8,8 @@ permalink: /examples/
 **Definition:** Given a probability distribution $P$ on $\Omega$, the associated **Cramér rate function** is defined to be the convex conjugate of the log-normalizer:
  \[[ \psi^*_P(\theta) := \sup \\{ \langle y, \theta\rangle - \log M[\theta] \colon y\in \mathbb{R}^d\\} \]]
 where \[[ M[\theta] = \int\_{\Omega} \exp(\langle \cdot,\theta\rangle) dP \]] is the moment-generating function of $P$.
-<p align="center">
+
 **Table 1: Cramér rate functions for several popular parameterized distributions** 
-</p>
 | Reference Distribution $(P)$ | Cramér Rate Function $(\psi^*_P(y))$ | $\text{dom}\psi^*_P$ |
 |:----------------------------:|:------------------------------------:|:--------------------:|
 |  Multivariate Normal $(\mu \in \mathbb{R}^d, \Sigma \in \mathbb{S}^d, \Sigma \succ 0$)      | $\frac{1}{2}(y-\mu)^T\Sigma^{-1}(y-\mu)$                                     |   $\mathbb{R}^d$                  |
