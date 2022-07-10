@@ -12,3 +12,9 @@ permalink: /examples/
 where \[[ M[\theta] = \int \exp(\langle \cdot,\theta\rangle) dP \]] is the moment-generating function of $P$.
 
 Examples: 
+
+| Reference Distribution ($P$) | Cramér Rate Function ($\psi^*_P(y)$) | $\text{dom}\psi^*_P$ |
+|:----------------------------:|:------------------------------------:|:--------------------:|
+|  Multivariate Normal ($\mu \in \mathbb{R}^d, \Sigma = \Sigma^T \succ 0$)      | $\frac{1}{2}(y-\mu)^T\Sigma^{-1}(y-\mu)$                                     |   $\mathbb{R}^d$                  |
+|                              |                                      |                      |
+|                              |                                      |                      |
