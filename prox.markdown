@@ -35,7 +35,7 @@ adaptable kernel $h$.
 |Gamma $(\alpha, \beta \in \mathbb{R}\_{++})$ | $x^+ = (\bar{x} - t\beta +\sqrt{(\bar{x}-t\beta)^2 + 4t\alpha})/2$|
 |Laplace $(\mu \in \mathbb{R}, b \in \mathbb{R}\_{++})$| $x^+ = \begin{cases}\mu, &\bar{x} = \mu\\\\ \mu+b\rho,&\bar{x}\neq \mu\end{cases}\\\\ \text{ where } \rho \in \mathbb{R}\colon \alpha\_1\rho^3 + \alpha\_2\rho^2 +\alpha\_3\rho + \alpha\_4 = 0,\\\\ \text{ with } \alpha\_1 = (b/t)^2b^2, \alpha\_2 = 2(b/t)^2b(\mu-\bar{x}),\\\\ \alpha\_3 = (b/t)^2(\mu -\bar{x})^2 - 2(b/t)b -1, \alpha\_4 = -2(b/t)(\mu-\bar{x})$|
 | Poisson $(\lambda \in \mathbb{R}_{++})$     | $x^+ \in \mathbb{R}\_+ \colon \log(x^+/\lambda) + (x^+-\bar{x})/t=0$|
-| Multinomial $(p\in \Delta_d, n\in \mathbb{N})$      | $x^+ \in n\Delta\_d\cap I(p) \colon (x\_i^+ -\bar{x}\_i)/t + \log\left(\frac{x\_i^+}{np\_i\right)+1 +\lambda = 0$|
+| Multinomial $(p\in \Delta\_d, n\in \mathbb{N})$      | $x^+ \in n\Delta\_d\cap I(p) \colon (x\_i^+ -\bar{x}\_i)/t + \log\left(\frac{x\_i^+}{np\_i}\right)+1 +\lambda = 0$|
 | Negative Multinomial $\\\\ (p \in [0,1)^d, y_0\in \mathbb{R}\_{++},\\\\ p_0 := 1-\sum\_{i=1}^{d}p_i)$      | $x^+\in\mathbb{R}\_+^d\cap I(p)\colon \log\left(\frac{x\_i^+}{p\_i\rho(x^+)}\right)+1 +(x\_i^+-\bar{x}\_i)/t = \frac{\bar{x}\_i+x\_0}{\rho(x^+)},\\\\ \text{where } \rho(x^+) := x\_0 + \sum\_{i=1}^d x\_i^+$|
 
 
