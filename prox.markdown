@@ -5,13 +5,16 @@ usemathjax: true
 permalink: /prox/
 ---
 
-Consider the additive composite model \[[ \min \{ f(x) + g(x) \colon x\in \mathbb{R}^d\}\]]
+Consider the additive composite model \[[ \min \\{ f(x) + g(x) \colon x\in \mathbb{R}^d\\}\]]
 where $f\colon \mathbb{R}^d \to (-\infty,+\infty]$ and $g\colon \mathbb{R}^d \to (-\infty,+\infty]$ are proper, closed, and convex functions. A variety of statistical estimation problems are encompassed by this model, and a particular method for solving this minimization is the
 **Bregman Proximal Gradient (BPG) Algorithm**.
 
 > Bregman Proximal Gradient (BPG) Algorithm
+
 > Initialization. Set $t\in (0,1/L]$ and $x^0 \in \text{int(dom}h)$
+
 > Procedure. For $k=0,1,2,...:$
+
 > \[[ x^{k+1} = \text{prox}\_{tg}^h(\nabla h^*(\nabla h(x^k)-t\nabla f(x^k)))\]]
 
 **Definition:** Given a probability distribution $P$ on $\Omega$, the associated **Cramér rate function** is defined to be the convex conjugate of the log-normalizer:
