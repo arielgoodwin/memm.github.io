@@ -13,8 +13,9 @@ where \[[ M[\theta] = \int \exp(\langle \cdot,\theta\rangle) dP \]] is the momen
 
 Examples: 
 
-| Reference Distribution ($P$) | Cramér Rate Function ($\psi^*_P(y)$) | $\text{dom}\psi^*_P$ |
+| Reference Distribution $(P)$ | Cramér Rate Function $(\psi^*_P(y))$ | $\text{dom}\psi^*_P$ |
 |:----------------------------:|:------------------------------------:|:--------------------:|
-|  Multivariate Normal ($\mu \in \mathbb{R}^d, \Sigma = \Sigma^T \succ 0$)      | $\frac{1}{2}(y-\mu)^T\Sigma^{-1}(y-\mu)$                                     |   $\mathbb{R}^d$                  |
-|                              |                                      |                      |
+|  Multivariate Normal ($\mu \in \mathbb{R}^d, \Sigma \in \mathbb{S}^d, \Sigma \succ 0$)      | $\frac{1}{2}(y-\mu)^T\Sigma^{-1}(y-\mu)$                                     |   $\mathbb{R}^d$                  |
+| Multivariate Normal-inverse Gaussian ($\mu,\beta \in \mathbb{R}^d, \alpha, \delta \in \mathbb{R}, \delta > 0, \Sigma \in 
+\mathbb{S}^d, \Sigma \succ 0, \alpha \geq \sqrt{\beta^T\Sigma \beta}, \gamma := \sqrt{\alpha^2 - \beta^T\Sigma \beta}$)                             | $\alpha\sqrt{\delta^2+ (y-\mu)^T\Sigma^{-1}(y-\mu)} - \langle \beta,y-\mu \rangle - \delta \gamma$                                     |   $\mathbb{R}$                   |
 |                              |                                      |                      |
