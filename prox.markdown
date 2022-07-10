@@ -30,5 +30,6 @@ adaptable kernel $h$.
  
 | Reference Distribution | Proximal Operator | 
 |:----------------------------:|:------------------------------------:|
-|  Multivariate Normal $(\mu \in \mathbb{R}^d, \Sigma \in \mathbb{S}^d, \Sigma \succ 0$)      | $x^+ = (tI +\Sigma)^{-1}(\Sigma\bar{x}+t\mu)$|| Multivariate Normal-inverse Gaussian $(\mu,\beta \in \mathbb{R}^d, \alpha, \delta \in \mathbb{R}, \delta > 0,\\\\ \Sigma \in \mathbb{S}^d, \Sigma \succ 0, \alpha \geq \sqrt{\beta^T\Sigma \beta},\\\\ \gamma := \sqrt{\alpha^2 - \beta^T\Sigma \beta})$             | x^+ = (I+\rho\Sigma^{-1})^{-1}(t\beta+\bar{x}+\rho\Sigma^{-1}\mu), \text{ where } \rho \in \mathbb{R}\_+\colon\\\\ (\rho\delta)^2 + \lVert (\rho^{-1}I+\Sigma^{-1})^{-1}(t\beta +\bar{x} - \mu\rVert\_{\Sigma^{-1}}^2 = (\alpha t)^2$|
+|  Multivariate Normal $(\mu \in \mathbb{R}^d, \Sigma \in \mathbb{S}^d, \Sigma \succ 0$)| $x^+ = (tI +\Sigma)^{-1}(\Sigma\bar{x}+t\mu)$|
+| Multivariate Normal-inverse Gaussian $(\mu,\beta \in \mathbb{R}^d, \alpha, \delta \in \mathbb{R}, \delta > 0,\\\\ \Sigma \in \mathbb{S}^d, \Sigma \succ 0, \alpha \geq \sqrt{\beta^T\Sigma \beta},\\\\ \gamma := \sqrt{\alpha^2 - \beta^T\Sigma \beta})$ | $x^+ = (I+\rho\Sigma^{-1})^{-1}(t\beta+\bar{x}+\rho\Sigma^{-1}\mu), \text{ where } \rho \in \mathbb{R}\_+\colon\\\\ (\rho\delta)^2 + \lVert (\rho^{-1}I+\Sigma^{-1})^{-1}(t\beta +\bar{x} - \mu\rVert\_{\Sigma^{-1}}^2 = (\alpha t)^2$|
 
