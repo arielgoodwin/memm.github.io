@@ -7,11 +7,11 @@ permalink: /examples/
 
 ## Cramér Function
 
-**Definition:** Given a probability distribution $P$, the associated Cramér function is defined to be the convex conjugate of the log-normalizer:
+**Definition:** Given a probability distribution $P$ on $\Omega$, the associated Cramér function is defined to be the convex conjugate of the log-normalizer:
  \[[ \psi^*_P(\theta) := \sup \\{ \langle y, \theta\rangle - \log M[\theta] \colon y\in \mathbb{R}^d\\} \]]
-where \[[ M[\theta] = \int \exp(\langle \cdot,\theta\rangle) dP \]] is the moment-generating function of $P$.
+where \[[ M[\theta] = \int_{\Omega} \exp(\langle \cdot,\theta\rangle) dP \]] is the moment-generating function of $P$.
 
-Examples: 
+**Table 1: Cramér rate functions for several popular parameterized distributions** 
 
 | Reference Distribution $(P)$ | Cramér Rate Function $(\psi^*_P(y))$ | $\text{dom}\psi^*_P$ |
 |:----------------------------:|:------------------------------------:|:--------------------:|
@@ -26,6 +26,9 @@ Examples:
 | Continuous Uniform $\\\\(a,b\in \mathbb{R}, a< b, \mu := (a+b)/2)$      |  $\begin{cases} 0, &y-\mu\\\\ (y-\mu)\theta - \log\left(\frac{e^{(b-\mu)\theta}-e^{(a-\mu)\theta}}{(b-a)\theta}\right), &y\neq \mu \end{cases}\\\\ \text{where } \theta \in \mathbb{R} \colon y + \frac{1}{\theta} = \frac{be^{b\theta}-ae^{a\theta}}{e^{b\theta}-e^{a\theta}}$            |  $(a,b)$                    |
 |  Logistic $(\mu \in \mathbb{R}, s\in \mathbb{R}_{++})$      |  $\begin{cases} 0, &y-\mu\\\\ (y-\mu)\theta - \log\left(B(1-s\theta,1+s\theta)\right), &y\neq \mu \end{cases}\\\\ \text{where } \theta \in \mathbb{R}_+ \colon y -\mu = \frac{1}{\theta} + \frac{\pi s}{\tan(-\pi s\theta)}$            |  $\mathbb{R}$                    |
 
-
+Note: 
+- Chi-squared, Erlang, and Exponential distributions are special cases of the Gamma distribution
+- Binomial, Bernoulli, and Categorical distributions are special cases of the Multinomial distribution
+- Negative Binomial and (Shifted) Geometric distributions are special cases of the Negative Multinomial Distribution
 
 
