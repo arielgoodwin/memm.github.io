@@ -9,16 +9,20 @@ Consider the additive composite model \[[ \min \\{ f(x) + g(x) \colon x\in \math
 where $f\colon \mathbb{R}^d \to (-\infty,+\infty]$ and $g\colon \mathbb{R}^d \to (-\infty,+\infty]$ are proper, closed, and convex functions. A variety of statistical estimation problems are encompassed by this model, and a particular method for solving this minimization is the
 **Bregman Proximal Gradient (BPG) Algorithm**. The essential components of this method are a choice of **smooth adaptable kernel** and the definition of the **Bregman proximal operator**.
 
-**Definition:** Given a probability distribution $P$ on $\Omega$, the associated **Cramér rate function** is defined to be the convex conjugate of the log-normalizer:
- \[[ \psi^*_P(\theta) := \sup \\{ \langle y, \theta\rangle - \log M[\theta] \colon y\in \mathbb{R}^d\\} \]]
-where \[[ M[\theta] = \int\_{\Omega} \exp(\langle \cdot,\theta\rangle) dP \]] is the moment-generating function of $P$.
+**Definition:** Let $f\colon \mathbb{R}^d \to (-\infty, +\infty]$ be a proper, closed function which is continuously differentiable on
+$\text{int(dom}f)$. Then a
+function $h\colon \mathbb{R}^d\to (-\infty, +\infty]$ of Legendre type$^1$ is a **smooth adaptable kernel** with respect to $f$ if 
+dom $h \subseteq $ dom $f$ and there exists a constant $L > 0$ such that $Lh - f$ is convex.
 
-
-> Bregman Proximal Gradient (BPG) Algorithm <br> Initialization. Set $t\in (0,1/L]$ and $x^0 \in \text{int(dom}h)$<br> Procedure. For $k=0,1,2,...:$ \[[ x^{k+1} = \text{prox}\_{tg}^h(\nabla h^*(\nabla h(x^k)-t\nabla f(x^k)))\]]
 
 **Definition:** Let $g\colon \mathbb{R}^d \to (-\infty, +\infty]$ and $h\colon \mathbb{R}^d\to (-\infty, +\infty]$ be two functions, where
 the former is proper and closed while the latter is of Legendre type$^1$. Then the **Bregman proximal operator** is defined as 
 \[[\text{prox}\_g^h(\bar{x}) := \text{argmin}\\{g(x) + h(x) - h(\bar{x}) - \langle \nabla h(\bar{x}), x-\bar{x}\rangle \\}\]]
+
+Then a fruitful approach for solving the additive composite problem is to find $h$ that is smooth adaptable with respect to $f$ and simultaneously admits a computationally efficient proximal operator with respect to $g$. This leads to the following algorithm.
+
+> Bregman Proximal Gradient (BPG) Algorithm <br> Initialization. Set $t\in (0,1/L]$ and $x^0 \in \text{int(dom}h)$<br> Procedure. For $k=0,1,2,...:$ \[[ x^{k+1} = \text{prox}\_{tg}^h(\nabla h^*(\nabla h(x^k)-t\nabla f(x^k)))\]]
+
 
 **Table 1: Cramér rate functions for several popular parameterized distributions**
  
