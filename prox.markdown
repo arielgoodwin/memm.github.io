@@ -29,8 +29,9 @@ Then a fruitful approach for solving the additive composite problem is to find $
 Here we compile Bregman proximal operators for the Cramér functions of several popular distributions, with different choices of the smooth
 adaptable kernel $h$. 
 
-## Smooth Adaptable Kernel: Energy $(h(x) = \frac{1}{2}\lVert x \rVert^2)$
 <a name="energy"></a>
+## Smooth Adaptable Kernel: Energy $(h(x) = \frac{1}{2}\lVert x \rVert^2)$
+
 | Reference Distribution | Proximal Operator | 
 |:----------------------------:|:------------------------------------:|
 |  Multivariate Normal $(\mu \in \mathbb{R}^d, \Sigma \in \mathbb{S}^d, \Sigma \succ 0$)| $x^+ = (tI +\Sigma)^{-1}(\Sigma\bar{x}+t\mu)$|
@@ -44,8 +45,9 @@ adaptable kernel $h$.
 | Continuous Uniform $(a,b\in \mathbb{R}, a\leq b, \mu := (a+b)/2)$      | $x^+ = \bar{x}-t\theta^+ \text{ where } \theta^+ = 0 \text{ if } \bar{x} = (a+b)/2, \\\\ \text{otherwise: }\theta^+ \in \mathbb{R}\setminus\\{0\\}:\\\\ t(\theta^+ -\bar{x}/t) + \frac{ae^{a\theta^+}-be^{b\theta^+}}{e^{a\theta^+}-e^{b\theta^+}} = \frac{1}{\theta^+}$|
 |  Logistic $(\mu \in \mathbb{R}, s\in \mathbb{R}_{++})$      | $x^+ = \bar{x} -t\theta^+ \text{ where } \theta^+ = 0 \text{ if } \bar{x} = \mu,\\\\ \text{otherwise: }\theta^+ \in \mathbb{R}\setminus\\{0\\}:\\\\ t\theta^+ + \frac{1}{\theta^+} + \frac{\pi s}{\tan(-\pi s \theta^+)} = \bar{x}-\mu$|
 
-## Smooth Adaptable Kernel: Boltzmann-Shannon Entropy $(h(x) = -\sum\_{i=1}^d \log(x\_i))$
 <a name="bsentropy"></a>
+## Smooth Adaptable Kernel: Boltzmann-Shannon Entropy $(h(x) = -\sum\_{i=1}^d \log(x\_i))$
+
 | Reference Distribution | Proximal Operator | 
 |:----------------------------:|:------------------------------------:|
 |  Multivariate Normal $(\mu, \sigma \in \mathbb{R}, \sigma > 0$)| $x^+ = ((t/\sigma)\mu -1/\bar{x} + \sqrt{((t/\sigma)\mu - 1/\bar{x})^2+4(t/\sigma)})/(2t/\sigma)$|
