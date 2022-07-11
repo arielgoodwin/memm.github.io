@@ -5,7 +5,7 @@ usemathjax: true
 permalink: /prox/
 ---
 
-<p style="text-align: center;">[Energy](#energy) [Boltzmann-Shannon Entropy](#bsentropy) [Burg Entropy](#burg)</p>
+[Energy](#energy) [Boltzmann-Shannon Entropy](#bsentropy) [Burg Entropy](#burg)
 
 Consider the additive composite model \[[ \min \\{ f(x) + g(x) \colon x\in \mathbb{R}^d\\}\]]
 where $f\colon \mathbb{R}^d \to (-\infty,+\infty]$ and $g\colon \mathbb{R}^d \to (-\infty,+\infty]$ are proper, closed, and convex functions. A variety of statistical estimation problems are encompassed by this model, and a particular method for solving this minimization is the
