@@ -26,7 +26,7 @@ Then a fruitful approach for solving the additive composite problem is to find $
 Here we compile Bregman proximal operators for the Cramér functions of several popular distributions, with different choices of the smooth
 adaptable kernel $h$. 
 
-**Proximal operators for the Normal Linear Model $(h = \frac{1}{2}\lVert\cdot \rVert^2)$**
+**Proximal operators for the Normal Linear Model $(h(x) = \frac{1}{2}\lVert x \rVert^2)$**
  
 | Reference Distribution | Proximal Operator | 
 |:----------------------------:|:------------------------------------:|
@@ -41,6 +41,20 @@ adaptable kernel $h$.
 | Continuous Uniform $(a,b\in \mathbb{R}, a\leq b, \mu := (a+b)/2)$      | $x^+ = \bar{x}-t\theta^+ \text{ where } \theta^+ = 0 \text{ if } \bar{x} = (a+b)/2, \\\\ \text{otherwise: }\theta^+ \in \mathbb{R}\setminus\\{0\\}:\\\\ t(\theta^+ -\bar{x}/t) + \frac{ae^{a\theta^+}-be^{b\theta^+}}{e^{a\theta^+}-e^{b\theta^+}} = \frac{1}{\theta^+}$|
 |  Logistic $(\mu \in \mathbb{R}, s\in \mathbb{R}_{++})$      | $x^+ = \bar{x} -t\theta^+ \text{ where } \theta^+ = 0 \text{ if } \bar{x} = \mu,\\\\ \text{otherwise: }\theta^+ \in \mathbb{R}\setminus\\{0\\}:\\\\ t\theta^+\frac{1}{\theta^+} + \frac{\pi s}{\tan(-\pi s \theta^+} = \bar{x}-\mu$|
 
+**Proximal operators for the Gamma $(\beta = 1)$ Linear Model $(h(x) = -\sum\_{i=1}^d \log(x\_i))$**
+ 
+| Reference Distribution | Proximal Operator | 
+|:----------------------------:|:------------------------------------:|
+|  Multivariate Normal $(\mu \in \mathbb{R}^d, \Sigma \in \mathbb{S}^d, \Sigma \succ 0$)| $x^+ = (tI +\Sigma)^{-1}(\Sigma\bar{x}+t\mu)$|
+| Multivariate Normal-inverse Gaussian $(\mu,\beta \in \mathbb{R}^d, \alpha, \delta \in \mathbb{R}, \delta > 0,\\\\ \Sigma \in \mathbb{S}^d, \Sigma \succ 0, \alpha \geq \sqrt{\beta^T\Sigma \beta},\\\\ \gamma := \sqrt{\alpha^2 - \beta^T\Sigma \beta})$ | $x^+ = (I+\rho\Sigma^{-1})^{-1}(t\beta+\bar{x}+\rho\Sigma^{-1}\mu), \text{ where } \rho \in \mathbb{R}\_+\colon\\\\ (\rho\delta)^2 + \lVert (\rho^{-1}I+\Sigma^{-1})^{-1}(t\beta +\bar{x} - \mu\rVert\_{\Sigma^{-1}}^2 = (\alpha t)^2$|
+|Gamma $(\alpha, \beta \in \mathbb{R}\_{++})$ | $x^+ = (\bar{x} - t\beta +\sqrt{(\bar{x}-t\beta)^2 + 4t\alpha})/2$|
+|Laplace $(\mu \in \mathbb{R}, b \in \mathbb{R}\_{++})$| $x^+ = \begin{cases}\mu, &\bar{x} = \mu\\\\ \mu+b\rho,&\bar{x}\neq \mu\end{cases}\\\\ \text{ where } \rho \in \mathbb{R}\colon \alpha\_1\rho^3 + \alpha\_2\rho^2 +\alpha\_3\rho + \alpha\_4 = 0,\\\\ \text{ with } \alpha\_1 = (b/t)^2b^2, \alpha\_2 = 2(b/t)^2b(\mu-\bar{x}),\\\\ \alpha\_3 = (b/t)^2(\mu -\bar{x})^2 - 2(b/t)b -1, \alpha\_4 = -2(b/t)(\mu-\bar{x})$|
+| Poisson $(\lambda \in \mathbb{R}_{++})$     | $x^+ \in \mathbb{R}\_+ \colon \log(x^+/\lambda) + (x^+-\bar{x})/t=0$|
+| Multinomial $(p\in \Delta\_d, n\in \mathbb{N})$      | $x^+ \in n\Delta\_d\cap I(p) \colon (x\_i^+ -\bar{x}\_i)/t + \log\left(\frac{x\_i^+}{np\_i}\right)+1 +\lambda = 0$|
+| Negative Multinomial $\\\\ (p \in [0,1)^d, y_0\in \mathbb{R}\_{++},\\\\ p_0 := 1-\sum\_{i=1}^{d}p_i)$      | $x^+\in\mathbb{R}\_+^d\cap I(p)\colon \log\left(\frac{x\_i^+}{p\_i\rho(x^+)}\right)+1 +(x\_i^+-\bar{x}\_i)/t = \frac{\bar{x}\_i+x\_0}{\rho(x^+)},\\\\ \text{where } \rho(x^+) := x\_0 + \sum\_{i=1}^d x\_i^+$|
+| Discrete Uniform $(a,b\in \mathbb{Z}, a\leq b, \mu := (a+b)/2,\\\\ n := b-a+1)$      | $x^+ = \bar{x}-t\theta^+ \text{ where } \theta^+ = 0 \text{ if } \bar{x} = (a+b)/2, \\\\ \text{otherwise: }\theta^+ \in \mathbb{R}\setminus\\{0\\}:\\\\ t(\theta^+ -\bar{x}/t) + \frac{(b+1)e^{(b+1)\theta^+}-ae^{a\theta^+}}{e^{(b+1)\theta^+}-e^{a\theta^+}} = \frac{e^{\theta^+}}{e^{\theta^+}-1}$|
+| Continuous Uniform $(a,b\in \mathbb{R}, a\leq b, \mu := (a+b)/2)$      | $x^+ = \bar{x}-t\theta^+ \text{ where } \theta^+ = 0 \text{ if } \bar{x} = (a+b)/2, \\\\ \text{otherwise: }\theta^+ \in \mathbb{R}\setminus\\{0\\}:\\\\ t(\theta^+ -\bar{x}/t) + \frac{ae^{a\theta^+}-be^{b\theta^+}}{e^{a\theta^+}-e^{b\theta^+}} = \frac{1}{\theta^+}$|
+|  Logistic $(\mu \in \mathbb{R}, s\in \mathbb{R}_{++})$      | $x^+ = \bar{x} -t\theta^+ \text{ where } \theta^+ = 0 \text{ if } \bar{x} = \mu,\\\\ \text{otherwise: }\theta^+ \in \mathbb{R}\setminus\\{0\\}:\\\\ t\theta^+\frac{1}{\theta^+} + \frac{\pi s}{\tan(-\pi s \theta^+} = \bar{x}-\mu$|
 
 
 
