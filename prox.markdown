@@ -37,6 +37,10 @@ adaptable kernel $h$.
 | Poisson $(\lambda \in \mathbb{R}_{++})$     | $x^+ \in \mathbb{R}\_+ \colon \log(x^+/\lambda) + (x^+-\bar{x})/t=0$|
 | Multinomial $(p\in \Delta\_d, n\in \mathbb{N})$      | $x^+ \in n\Delta\_d\cap I(p) \colon (x\_i^+ -\bar{x}\_i)/t + \log\left(\frac{x\_i^+}{np\_i}\right)+1 +\lambda = 0$|
 | Negative Multinomial $\\\\ (p \in [0,1)^d, y_0\in \mathbb{R}\_{++},\\\\ p_0 := 1-\sum\_{i=1}^{d}p_i)$      | $x^+\in\mathbb{R}\_+^d\cap I(p)\colon \log\left(\frac{x\_i^+}{p\_i\rho(x^+)}\right)+1 +(x\_i^+-\bar{x}\_i)/t = \frac{\bar{x}\_i+x\_0}{\rho(x^+)},\\\\ \text{where } \rho(x^+) := x\_0 + \sum\_{i=1}^d x\_i^+$|
+| Discrete Uniform $(a,b\in \mathbb{Z}, a\leq b, \mu := (a+b)/2,\\\\ n := b-a+1)$      | $x^+ = \bar{x}-t\theta^+ \text{ where } \theta^+ = 0 \text{ if } \bar{x} = (a+b)/2, \\\\ \text{otherwise: }\theta^+ \in \mathbb{R}\setminus\\{0\\}:\\\\ t(\theta^+ -\bar{x}/t) + \frac{(b+1)e^{(b+1)\theta^+}-ae^{a\theta^+}}{e^{(b+1)\theta^+}-e^{a\theta^+}} = \frac{e^{\theta^+}}{e^{\theta^+}-1}$|
+| Continuous Uniform $(a,b\in \mathbb{R}, a\leq b, \mu := (a+b)/2)$      | $x^+ = \bar{x}-t\theta^+ \text{ where } \theta^+ = 0 \text{ if } \bar{x} = (a+b)/2, \\\\ \text{otherwise: }\theta^+ \in \mathbb{R}\setminus\\{0\\}:\\\\ t(\theta^+ -\bar{x}/t) + \frac{ae^{a\theta^+}-be^{b\theta^+}}{e^{a\theta^+}-e^{b\theta^+}} = \frac{1}{\theta^+}$|
+|  Logistic $(\mu \in \mathbb{R}, s\in \mathbb{R}_{++})$      | $x^+ = \bar{x} -t\theta^+ \text{ where } \theta^+ = 0 \text{ if } \bar{x} = \mu,\\\\ \text{otherwise: }\theta^+ \in \mathbb{R}\setminus\\{0\\}:\\\\ t\theta^+\frac{1}{\theta^+} + \frac{\pi s}{\tan(-\pi s \theta^+} = \bar{x}-\mu$|
+
 
 
 
