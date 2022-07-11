@@ -4,6 +4,7 @@ title: Proximal Operators
 usemathjax: true 
 permalink: /prox/
 ---
+[Normal](#Normal)
 
 Consider the additive composite model \[[ \min \\{ f(x) + g(x) \colon x\in \mathbb{R}^d\\}\]]
 where $f\colon \mathbb{R}^d \to (-\infty,+\infty]$ and $g\colon \mathbb{R}^d \to (-\infty,+\infty]$ are proper, closed, and convex functions. A variety of statistical estimation problems are encompassed by this model, and a particular method for solving this minimization is the
@@ -25,6 +26,8 @@ Then a fruitful approach for solving the additive composite problem is to find $
 
 Here we compile Bregman proximal operators for the Cramér functions of several popular distributions, with different choices of the smooth
 adaptable kernel $h$. 
+
+<a name="Normal"></a>
 
 **Proximal operators for the Normal Linear Model $(h(x) = \frac{1}{2}\lVert x \rVert^2)$**
  
