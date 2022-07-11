@@ -4,9 +4,9 @@ title: Proximal Operators
 usemathjax: true 
 permalink: /prox/
 ---
-[Energy](#smooth-adaptable-kernel:-energy)
-[Boltzmann-Shannon Entropy](#smooth-adaptable-kernel:-boltzmann-shannon-entropy)
-[Burg Entropy](#smooth-adaptable-kernel:-burg-entropy)
+[Energy](#energy)
+[Boltzmann-Shannon Entropy](#bsentropy)
+[Burg Entropy](#burg)
 
 Consider the additive composite model \[[ \min \\{ f(x) + g(x) \colon x\in \mathbb{R}^d\\}\]]
 where $f\colon \mathbb{R}^d \to (-\infty,+\infty]$ and $g\colon \mathbb{R}^d \to (-\infty,+\infty]$ are proper, closed, and convex functions. A variety of statistical estimation problems are encompassed by this model, and a particular method for solving this minimization is the
@@ -29,10 +29,8 @@ Then a fruitful approach for solving the additive composite problem is to find $
 Here we compile Bregman proximal operators for the Cramér functions of several popular distributions, with different choices of the smooth
 adaptable kernel $h$. 
 
-## Smooth Adaptable Kernel: Energy
-
-**Proximal operators for the Normal Linear Model $(h(x) = \frac{1}{2}\lVert x \rVert^2)$**
- 
+## Smooth Adaptable Kernel: Energy $(h(x) = \frac{1}{2}\lVert x \rVert^2)$
+<a name="energy"></a>
 | Reference Distribution | Proximal Operator | 
 |:----------------------------:|:------------------------------------:|
 |  Multivariate Normal $(\mu \in \mathbb{R}^d, \Sigma \in \mathbb{S}^d, \Sigma \succ 0$)| $x^+ = (tI +\Sigma)^{-1}(\Sigma\bar{x}+t\mu)$|
@@ -46,10 +44,8 @@ adaptable kernel $h$.
 | Continuous Uniform $(a,b\in \mathbb{R}, a\leq b, \mu := (a+b)/2)$      | $x^+ = \bar{x}-t\theta^+ \text{ where } \theta^+ = 0 \text{ if } \bar{x} = (a+b)/2, \\\\ \text{otherwise: }\theta^+ \in \mathbb{R}\setminus\\{0\\}:\\\\ t(\theta^+ -\bar{x}/t) + \frac{ae^{a\theta^+}-be^{b\theta^+}}{e^{a\theta^+}-e^{b\theta^+}} = \frac{1}{\theta^+}$|
 |  Logistic $(\mu \in \mathbb{R}, s\in \mathbb{R}_{++})$      | $x^+ = \bar{x} -t\theta^+ \text{ where } \theta^+ = 0 \text{ if } \bar{x} = \mu,\\\\ \text{otherwise: }\theta^+ \in \mathbb{R}\setminus\\{0\\}:\\\\ t\theta^+ + \frac{1}{\theta^+} + \frac{\pi s}{\tan(-\pi s \theta^+)} = \bar{x}-\mu$|
 
-## Smooth Adaptable Kernel: Boltzmann-Shannon Entropy
-
-**Proximal operators for the Gamma $(\beta = 1)$ Linear Model $(h(x) = -\sum\_{i=1}^d \log(x\_i))$**
- 
+## Smooth Adaptable Kernel: Boltzmann-Shannon Entropy $(h(x) = -\sum\_{i=1}^d \log(x\_i))$
+<a name="bsentropy"></a>
 | Reference Distribution | Proximal Operator | 
 |:----------------------------:|:------------------------------------:|
 |  Multivariate Normal $(\mu, \sigma \in \mathbb{R}, \sigma > 0$)| $x^+ = ((t/\sigma)\mu -1/\bar{x} + \sqrt{((t/\sigma)\mu - 1/\bar{x})^2+4(t/\sigma)})/(2t/\sigma)$|
@@ -65,4 +61,5 @@ adaptable kernel $h$.
 |  Logistic $(\mu \in \mathbb{R}, s\in \mathbb{R}_{++})$      | $x^+ = \bar{x}/(t\bar{x}\theta^+ +1) \text{ where } \theta^+ = 0 \text{ if } \bar{x} = \mu,\\\\ \text{otherwise: }\theta^+ \in \mathbb{R}\setminus\\{0\\}:\\\\ \frac{1}{\theta^+} + \frac{\pi s}{\tan(-\pi s \theta^+)} + \mu = \frac{\bar{x}}{\bar{x}t\theta^+ +1}$|
 
 
-## Smooth Adaptable Kernel: Burg Entropy
+## Smooth Adaptable Kernel: Burg Entropy $(h(x) = \sum\_{i=1}^d x\_i\log x\_i)$
+<a name="burg"></a>
