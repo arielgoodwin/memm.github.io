@@ -4,9 +4,9 @@ title: Proximal Operators
 usemathjax: true 
 permalink: /prox/
 ---
-[Energy](#energy)
-[Boltzmann-Shannon Entropy](#bsentropy)
-[Burg Entropy](#burg)
+<p style="text-align: center;">
+[Energy](#energy) [Boltzmann-Shannon Entropy](#bsentropy) [Burg Entropy](#burg)
+</p>
 
 Consider the additive composite model \[[ \min \\{ f(x) + g(x) \colon x\in \mathbb{R}^d\\}\]]
 where $f\colon \mathbb{R}^d \to (-\infty,+\infty]$ and $g\colon \mathbb{R}^d \to (-\infty,+\infty]$ are proper, closed, and convex functions. A variety of statistical estimation problems are encompassed by this model, and a particular method for solving this minimization is the
@@ -30,7 +30,7 @@ Here we compile Bregman proximal operators for the Cramér functions of several 
 adaptable kernel $h$. 
 
 <a name="energy"></a>
-## Smooth Adaptable Kernel: Energy $(h(x) = \frac{1}{2}\lVert x \rVert^2)$
+# Smooth Adaptable Kernel: Energy $(h(x) = \frac{1}{2}\lVert x \rVert^2)$
 
 | Reference Distribution | Proximal Operator | 
 |:----------------------------:|:------------------------------------:|
@@ -46,7 +46,7 @@ adaptable kernel $h$.
 |  Logistic $(\mu \in \mathbb{R}, s\in \mathbb{R}_{++})$      | $x^+ = \bar{x} -t\theta^+ \text{ where } \theta^+ = 0 \text{ if } \bar{x} = \mu,\\\\ \text{otherwise: }\theta^+ \in \mathbb{R}\setminus\\{0\\}:\\\\ t\theta^+ + \frac{1}{\theta^+} + \frac{\pi s}{\tan(-\pi s \theta^+)} = \bar{x}-\mu$|
 
 <a name="bsentropy"></a>
-## Smooth Adaptable Kernel: Boltzmann-Shannon Entropy $(h(x) = -\sum\_{i=1}^d \log(x\_i))$
+# Smooth Adaptable Kernel: Boltzmann-Shannon Entropy $(h(x) = -\sum\_{i=1}^d \log(x\_i))$
 
 | Reference Distribution | Proximal Operator | 
 |:----------------------------:|:------------------------------------:|
@@ -63,5 +63,5 @@ adaptable kernel $h$.
 |  Logistic $(\mu \in \mathbb{R}, s\in \mathbb{R}_{++})$      | $x^+ = \bar{x}/(t\bar{x}\theta^+ +1) \text{ where } \theta^+ = 0 \text{ if } \bar{x} = \mu,\\\\ \text{otherwise: }\theta^+ \in \mathbb{R}\setminus\\{0\\}:\\\\ \frac{1}{\theta^+} + \frac{\pi s}{\tan(-\pi s \theta^+)} + \mu = \frac{\bar{x}}{\bar{x}t\theta^+ +1}$|
 
 
-## Smooth Adaptable Kernel: Burg Entropy $(h(x) = \sum\_{i=1}^d x\_i\log x\_i)$
+# Smooth Adaptable Kernel: Burg Entropy $(h(x) = \sum\_{i=1}^d x\_i\log x\_i)$
 <a name="burg"></a>
